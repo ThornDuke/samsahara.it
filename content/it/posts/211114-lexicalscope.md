@@ -51,11 +51,11 @@ funzioni e i blocchi (`for`, `while`, ecc). Il procedimento è il seguente:
 quando il compilatore inizia l'analisi del codice crea un _scope_ "globale": durante l'analisi del
 codice il compilatore può incontrare variabili, funzioni, o blocchi:
 
-- se incontra una nuova variabile il compilatore la assegna allo _scope_ corrente, che in questo
-  caso è quello globale;
-- se invece incontra una funzione o un blocco apre un nuovo _scope_ all'interno di quello corrente.
-  Il nuovo _scope_ diventa quello corrente e tutte le nuove variabili incontrate vengono assegnate
-  al nuovo scope;
+- se incontra una nuova dichiarazione di variabile il compilatore la assegna allo _scope_ corrente,
+  che in questo caso è quello globale;
+- se invece incontra una dichiarazione di funzione o un blocco apre un nuovo _scope_ all'interno di
+  quello corrente. Il nuovo _scope_ diventa quello corrente e tutte le nuove dichiarazioni di
+  variabile vengono assegnate al nuovo scope;
 - questo avviene fino alla chiusura dello _scope_ della funzione o del blocco (che solitamente
   avviene con la graffa di chiusura "`}`"). Lo _scope_ corrente non è più quello appena chiuso, ma
   quello precedente, ovvero quello all'interno del quale era stata aperta la funzione o il blocco.
@@ -64,16 +64,16 @@ codice il compilatore può incontrare variabili, funzioni, o blocchi:
 
 Le variabili dichiarate in _scope_ diversi sono considerate sempre variabili diverse, anche se hanno
 lo stesso nome. Quando il compilatore incontra una assegnazione di un valore ad una variabile deve
-quindi determinare _quale variabile_, tra le diverse con lo stesso nome dichiarate all'interno del
+quindi determinare _quale_ variabile, tra le diverse con lo stesso nome dichiarate all'interno del
 programma, riceverà l'assegnazione del valore.
 
 Inizia quindi a cercare nello _scope_ corrente la dichiarazione di una variabile con quel nome; se
-la trova ferma la ricerca ed esegue l'assegnazione, altrimenti la cerca nello _scope esterno_,
-quello all'interno del quale lo _scope_ corrente si trova ed è stato creato.
+la trova ferma la ricerca ed esegue l'assegnazione, altrimenti continua la ricerca nello _scope
+esterno_, quello all'interno del quale lo _scope_ corrente si trova ed è stato creato.
 
-Questa ricerca prosegue fino a quando il compilatore arriva a cercare nello _scope_ globale, quello
-più esterno di tutti. Se non trova la dichiarazione di variabile neanche lì allora solleva un
-errore.
+Questa ricerca (da uno _scope_ a quello esterno, a quello ancora più esterno) prosegue fino a quando
+il compilatore arriva a cercare nello _scope_ globale, quello più esterno di tutti. Se non trova la
+dichiarazione di variabile neanche lì allora solleva un errore.
 
 Si noti che il compilatore effettua la ricerca sempre in linea retta e sempre verso _scope_ esterni
 a quello corrente.

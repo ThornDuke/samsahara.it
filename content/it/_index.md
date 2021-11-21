@@ -1,4 +1,4 @@
 ---
 title: 'Hacker Nirvana'
-description: 'Rapsodia informatica'
+description: 'rapsodia informatica'
 ---
