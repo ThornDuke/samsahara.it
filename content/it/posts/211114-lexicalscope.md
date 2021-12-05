@@ -16,7 +16,7 @@ Vediamo come funziona.
 
 ## Il compilatore JavaScript
 
-JavaScript è un linguaggio compilato. Prima della fase di esecuzione il codice passa per una fase di
+JavaScript è un linguaggio compilato. Prima della esecuzione il codice passa per una fase di
 vera e propria compilazione, suddivisa in tre sotto-fasi:
 
 1.  **tokenizing/lexing**: il codice viene suddiviso in cellule indivisibili chiamate _tokens_,
@@ -26,7 +26,7 @@ vera e propria compilazione, suddivisa in tre sotto-fasi:
     let animal = 'fox';
     ```
 
-    viene suddivisa nei 5 tokens `let`, `animal`, `=`, `'fox'`, `;`.
+    viene suddivisa nei 5 tokens `let`, `animal`, `=`, `'fox'`, `;` (il punto e virgola è un token).
 
 2.  **parsing**: la lista di tokens viene organizzata in una struttura ad albero chiamata _abstract
     syntax tree_ (AST).
@@ -142,14 +142,17 @@ function getAnimalName() {
 
 getAnimalName();
 
+// output del valore di una variabile che /non dovrebbe/ esistere
 console.log(animal);
 // 'fox'
-// ???
+// da dove viene fuori questo valore?
 ```
 
 È un problema di cui JavaScript ha sempre sofferto: se si assegna un valore ad una variabile non
-dichiarata, JavaScript crea silenziosamente una variabile con quel nome nello _scope_ globale, con
-il concreto rischio di generare _bug_ insidiosi. Si può però costringere il compilatore a sollevare
+dichiarata, JavaScript crea _silenziosamente_ una variabile con quel nome nello _scope_ globale, con
+il concreto rischio di generare _bug_ insidiosi.
+
+Si può però costringere il compilatore a sollevare
 un errore in presenza di qualunque variabile non formalmente dichiarata facendo girare il programma
 (o la funzione) in _strict mode_.
 

@@ -4,11 +4,11 @@ title = 'Hacker Nirvana'
 theme = "ananke"
 resourceDir = "../resources"
 
- DefaultContentLanguage = "it"
- SectionPagesMenu = "main"
- Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+DefaultContentLanguage = "it"
+SectionPagesMenu = "main"
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 # googleAnalytics = ""
- enableRobotsTXT = true
+enableRobotsTXT = true
 
 [languages]
   [languages.it]
@@ -23,7 +23,7 @@ resourceDir = "../resources"
 
 [params]
   author = "Sergio Spina"
-  description = "Il blog di Sam Sahara"
+  description = "Sam Sahara il blog"
 #  disqusShortname = "hacker-nirvana"
 #  favicon = ""
 #  site_logo = ""
@@ -42,5 +42,4 @@ resourceDir = "../resources"
 #  # http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
   background_color_class = "bg-black"
 #  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
-#  recent_posts_number = 2
-
+  recent_posts_number = 4
