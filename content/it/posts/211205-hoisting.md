@@ -1,6 +1,7 @@
 ---
 title: 'Hoisting'
 date: 2021-12-05
+featured_image: 'donknuth.jpeg'
 tags: ['scope', 'hoisting']
 toc: true
 draft: false
@@ -35,8 +36,8 @@ console anche se la funzione chiamata è definita solo successivamente.
 
 ## Come funziona
 
-L’hoisting funziona in modo lievemente diverso a seconda che si tratti di dichiarazioni di funzione,
-di variabili dichiarate con `var`, o ancora di variabili dichiarate con `let` o `const`.
+L’hoisting funziona in modo diverso a seconda che si tratti di dichiarazioni di funzione, di
+variabili dichiarate con `var`, o ancora di variabili dichiarate con `let` o `const`.
 
 ### Dichiarazioni di funzione
 
@@ -236,3 +237,5 @@ individuabili.
 L'unico modo per cercare di evitare questi errori sembra essere quello di dichiarare tutte le
 variabili e le funzioni _all'inizio_ dello _scope_ di riferimento, riducendo al minimo il lavoro di
 _hoisting_ da parte del compilatore e azzerando la durata della TDZ.
+
+{{< banner-description "Nel banner: Donald Knuth, autore di “The art of computer programming”, creatore del software TeX e del suo manuale “The TeXbook”." >}}

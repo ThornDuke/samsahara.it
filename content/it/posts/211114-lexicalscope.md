@@ -1,6 +1,7 @@
 ---
 title: Il Lexical Scope
 date: 2021-11-14
+featured_image: 'richstall.jpeg'
 tags: ['scope']
 toc: true
 draft: false
@@ -16,8 +17,8 @@ Vediamo come funziona.
 
 ## Il compilatore JavaScript
 
-JavaScript è un linguaggio compilato. Prima della esecuzione il codice passa per una fase di
-vera e propria compilazione, suddivisa in tre sotto-fasi:
+JavaScript è un linguaggio compilato. Prima della esecuzione il codice passa per una fase di vera e
+propria compilazione, suddivisa in tre sotto-fasi:
 
 1.  **tokenizing/lexing**: il codice viene suddiviso in cellule indivisibili chiamate _tokens_,
     ognuna delle quali rappresenta un elemento significativo. Ad esempio, la linea
@@ -152,9 +153,8 @@ console.log(animal);
 dichiarata, JavaScript crea _silenziosamente_ una variabile con quel nome nello _scope_ globale, con
 il concreto rischio di generare _bug_ insidiosi.
 
-Si può però costringere il compilatore a sollevare
-un errore in presenza di qualunque variabile non formalmente dichiarata facendo girare il programma
-(o la funzione) in _strict mode_.
+Si può però costringere il compilatore a sollevare un errore in presenza di qualunque variabile non
+formalmente dichiarata facendo girare il programma (o la funzione) in _strict mode_.
 
 ```javascript
 'use strict';
@@ -170,3 +170,5 @@ getAnimalName();
 
 console.log(animal);
 ```
+
+{{< banner-description "Nel banner: Richard Stallman, creatore della Free Software Foundation e dell'editor di testo Emacs." >}}
