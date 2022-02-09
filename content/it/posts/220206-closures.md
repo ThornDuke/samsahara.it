@@ -6,6 +6,7 @@ tags: ['closures']
 toc: true
 draft: false
 show_reading_time: true
+description: 'JavaScript programmazione avanzata, closures, scope'
 ---
 
 Le _closures_ sono una caratteristica importantissima, addirittura _fondamentale_ nel moderno
