@@ -6,7 +6,7 @@ tags: ['scope']
 toc: true
 draft: false
 show_reading_time: true
-description: 'JavaScript programmazione avanzata, lexical scope'
+metatag: 'JavaScript programmazione avanzata, lexical scope'
 ---
 
 JavaScript usa un particolare modello per gestire l'accesso alle variabili, chiamato **lexical

@@ -6,7 +6,7 @@ tags: ['scope', 'hoisting']
 toc: true
 draft: false
 show_reading_time: true
-description: 'JavaScript programmazione avanzata, hoisting, scope, let, var, const, function'
+metatag: 'JavaScript programmazione avanzata, hoisting, scope, let, var, const, function'
 ---
 
 Ogni variabile o dichiarazione di funzione ha un proprio ambito di visibilità e utilizzabilità
