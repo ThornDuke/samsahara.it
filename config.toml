@@ -23,7 +23,7 @@ enableRobotsTXT = false
 
 [params]
   author = "Sergio Spina"
-  description = "Sam Sahara il blog"
+  description = "Sam Sahara il blog - temi di programmazione avanzata"
 #  disqusShortname = "hacker-nirvana"
 #  favicon = ""
 #  site_logo = ""
